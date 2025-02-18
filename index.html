@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表白页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #ff6347;
+            font-size: 2em;
+        }
+        p {
+            font-size: 1.2em;
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #ff6347;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        button:hover {
+            background-color: #e05d44;
+        }
+        .heart {
+            font-size: 4em;
+            color: red;
+            animation: beat 1s infinite;
+        }
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>亲爱的，我想告诉你</h1>
+        <p>你是最美好的存在，我一直在想，有没有一种方式可以表达我对你的喜欢？</p >
+        <div class="heart">❤️</div>
+        <p>我知道这可能让你感到意外，但我真的希望你能给我一个机会，让我走进你的世界。</p >
+        <button onclick="accept()">接受我的心意</button>
+    </div>
+
+    <script>
+        function accept() {
+            alert("太好了！我知道你会接受的！❤️");
+            document.body.style.backgroundColor = "#ffcccb"; // 浅粉色背景
+            document.querySelector('h1').innerText = "太开心啦！";
+            document.querySelector('p').innerText = "我会一直一直爱你！";
+            document.querySelector('button').innerText = "杰宝相信我";
+            document.querySelector('.heart').style.color = "#ff00ff"; // 粉红色爱心
+        }
+    </script>
+</body>
+</html>
